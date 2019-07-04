@@ -1,0 +1,141 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "ngx-blader": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/workspace:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/ngx-blader",
+      "sourceRoot": "apps/ngx-blader/src",
+      "prefix": "ngx-blader",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngx-blader",
+            "index": "apps/ngx-blader/src/index.html",
+            "main": "apps/ngx-blader/src/main.ts",
+            "polyfills": "apps/ngx-blader/src/polyfills.ts",
+            "tsConfig": "apps/ngx-blader/tsconfig.app.json",
+            "assets": [
+              "apps/ngx-blader/src/favicon.ico",
+              "apps/ngx-blader/src/assets"
+            ],
+            "styles": ["apps/ngx-blader/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ngx-blader/src/environments/environment.ts",
+                  "with": "apps/ngx-blader/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-blader:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-blader:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-blader:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngx-blader/tsconfig.app.json",
+              "apps/ngx-blader/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/ngx-blader/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ngx-blader/jest.config.js",
+            "tsConfig": "apps/ngx-blader/tsconfig.spec.json",
+            "setupFile": "apps/ngx-blader/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngx-blader-e2e": {
+      "root": "apps/ngx-blader-e2e",
+      "sourceRoot": "apps/ngx-blader-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngx-blader-e2e/cypress.json",
+            "tsConfig": "apps/ngx-blader-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngx-blader:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-blader:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/ngx-blader-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**", "!apps/ngx-blader-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "ngx-blader"
+}
