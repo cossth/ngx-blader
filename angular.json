@@ -12,7 +12,7 @@
       },
       "root": "apps/client",
       "sourceRoot": "apps/client/src",
-      "prefix": "client",
+      "prefix": "blade",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -121,7 +121,7 @@
       "projectType": "library",
       "root": "libs/ngx-blader",
       "sourceRoot": "libs/ngx-blader/src",
-      "prefix": "blader",
+      "prefix": "blade",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

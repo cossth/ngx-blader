@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -11,4 +11,5 @@ import { RouterModule } from '@angular/router';
     ])
   ]
 })
-export class NgxBladerModule {}
+export class NgxBladerModule{
+}
