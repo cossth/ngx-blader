@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngx-blader",
+  "npmScope": "client",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,10 +8,10 @@
     "nx.json": "*"
   },
   "projects": {
-    "ngx-blader-e2e": {
+    "client-e2e": {
       "tags": []
     },
-    "ngx-blader": {
+    "client": {
       "tags": []
     }
   }

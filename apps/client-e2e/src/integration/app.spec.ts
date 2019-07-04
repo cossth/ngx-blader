@@ -1,9 +1,9 @@
 import { getGreeting } from '../support/app.po';
 
-describe('ngx-blader', () => {
+describe('client', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
-    getGreeting().contains('Welcome to ngx-blader!');
+    getGreeting().contains('Welcome to client!');
   });
 });
