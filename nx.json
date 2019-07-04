@@ -13,6 +13,9 @@
     },
     "client": {
       "tags": []
+    },
+    "ngx-blader": {
+      "tags": ["Platform:Shared"]
     }
   }
 }

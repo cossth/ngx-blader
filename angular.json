@@ -22,10 +22,7 @@
             "main": "apps/client/src/main.ts",
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
-            "assets": [
-              "apps/client/src/favicon.ico",
-              "apps/client/src/assets"
-            ],
+            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
             "styles": ["apps/client/src/styles.scss"],
             "scripts": []
           },
@@ -117,6 +114,44 @@
             "tsConfig": "apps/client-e2e/tsconfig.e2e.json",
             "exclude": ["**/node_modules/**", "!apps/client-e2e/**"]
           }
+        }
+      }
+    },
+    "ngx-blader": {
+      "projectType": "library",
+      "root": "libs/ngx-blader",
+      "sourceRoot": "libs/ngx-blader/src",
+      "prefix": "blader",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ngx-blader/tsconfig.lib.json",
+            "project": "libs/ngx-blader/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-blader/tsconfig.lib.json",
+              "libs/ngx-blader/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngx-blader/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-blader/jest.config.js",
+            "tsConfig": "libs/ngx-blader/tsconfig.spec.json",
+            "setupFile": "libs/ngx-blader/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

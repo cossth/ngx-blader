@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@client/ngx-blader": ["libs/ngx-blader/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
