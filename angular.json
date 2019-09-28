@@ -12,7 +12,7 @@
       },
       "root": "apps/client",
       "sourceRoot": "apps/client/src",
-      "prefix": "client",
+      "prefix": "blade",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

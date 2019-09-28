@@ -25,3 +25,8 @@ Run `npm run affected:test` to execute the unit tests affected by a change.
 Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 Run `npm run affected:e2e` to execute the end-to-end tests affected by a change.
+
+# Todo
+[ ] Add Blade Configuration
+[ ] Add Window Buttons
+[ ] Add Component Interface

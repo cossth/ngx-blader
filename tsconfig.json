@@ -14,9 +14,10 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@client/ngx-blader": ["libs/ngx-blader/src/index.ts"]
+      "@cossth/ngx-blader": ["libs/ngx-blader/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
