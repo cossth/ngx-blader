@@ -121,7 +121,7 @@
       "projectType": "library",
       "root": "libs/ngx-blader",
       "sourceRoot": "libs/ngx-blader/src",
-      "prefix": "blader",
+      "prefix": "bd-",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
