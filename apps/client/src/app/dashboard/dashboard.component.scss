@@ -17,7 +17,7 @@ header.topbar{
   overflow: hidden;
   .page-wrapper{
     margin-left: $sidebar-width;
-    height: calc(100vh - $topbar-height);
+    height: calc(100vh - #{$topbar-height});
     overflow: hidden;
   }
 }

@@ -1,10 +1,5 @@
 [
   {
-    "link": "/dashboard",
-    "icon": "icon-class",
-    "text": "Dashboard"
-  },
-  {
     "link": "/comp1",
     "icon": "icon-class",
     "text": "Component 1"
@@ -13,6 +8,11 @@
     "link": "/comp2",
     "icon": "icon-class",
     "text": "Component 2"
+  },
+  {
+    "link": "/dashboard",
+    "icon": "icon-class",
+    "text": "Dashboard"
   },
   {
     "link": "/blade",
