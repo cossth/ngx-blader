@@ -1,9 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BladeContainer } from './container/container.component';
-import { BladeComponent } from './blade/blade.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { BladeComponent, BladeContainer } from './components';
 
 const DECL = [BladeContainer, BladeComponent];
 

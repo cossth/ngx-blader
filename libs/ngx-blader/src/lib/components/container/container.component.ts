@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener, HostBinding, ElementRef } from '@angular/core';
-import { BladeSizeService } from '../service/blade-size.service';
+import { BladeSizeService } from '../../service';
 
 @Component({
-  selector: 'blade-container',
+  selector: 'bd-container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.scss'],
   providers: [BladeSizeService]

@@ -1,2 +1,2 @@
 export * from './lib/ngx-blader.module';
-export * from './lib/container/container.component';
+export * from './lib/components/container/container.component';
