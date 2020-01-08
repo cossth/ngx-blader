@@ -1,1 +1,8 @@
-$bd-min-width: 200px;
+$bd-title-height: 28px;
+$bd-icon-padding:4px;
+$bd-header-background: #f7f7f7;
+$bd-header-color: #6d6d6d;
+$bd-action-icon-size: 16px;
+$bd-action-button-size: $bd-action-icon-size * 1.5;
+$bd-min-width:320px;
+$bd-border: 2px solid darken($bd-header-color, 90%);

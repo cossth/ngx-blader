@@ -1,4 +1,4 @@
-@import '../../../../scss/_variable.scss';
+@import '../../../../../../scss/variables';
 :host{
   width: 100%;
   height: 100%;
@@ -11,6 +11,6 @@
   align-items: stretch;
   blade {
     +blade{
-      border-left: $blade-header-color;
+      border-left: $bd-header-color;
   }
 }}

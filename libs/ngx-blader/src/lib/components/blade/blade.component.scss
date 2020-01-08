@@ -1,44 +1,44 @@
-@import '../../../../'
+@import '~scss/variables';
 :host{
   display: block;
-  min-width: $blade-min-width;
+  min-width: $bd-min-width;
   height: 100%;
   &.maximized{
 width:100%;
   }
 }
-.blade-header-content{
-  height: $blade-title-height;
-  background: $blade-header-background;
-  color: $blade-header-color;
+.bd-header-content{
+  height: $bd-title-height;
+  background: $bd-header-background;
+  color: $bd-header-color;
   display: flex;
-  .blade-title-icon,.blade-title,.blade-actions{
+  .bd-title-icon,.bd-title,.bd-actions{
     align-content: center;
   }
-  .blade-title-icon{
+  .bd-title-icon{
     display: inline-block;
-    width: $blade-title-height;
-    padding: $blade-icon-padding;
-    font-size: $blade-title-height/2;
-    line-height: $blade-title-height  - 2 * $blade-icon-padding;
+    width: $bd-title-height;
+    padding: $bd-icon-padding;
+    font-size: $bd-title-height/2;
+    line-height: $bd-title-height  - 2 * $bd-icon-padding;
     align-content: center;
   }
-  .blade-title{
+  .bd-title{
     align-content: center;
     flex-grow: 1;
   }
-  .blade-actions{
+  .bd-actions{
     order: 3;
     align-content: center;
-      .blade-action{
+      .bd-action{
         background: transparent;
         border: none;
         padding: 0;
-        height: $blade-title-height;
-        width: $blade-action-button-size;
+        height: $bd-title-height;
+        width: $bd-action-button-size;
         svg{
-          height: $blade-action-icon-size;
-          width: $blade-action-icon-size;
+          height: $bd-action-icon-size;
+          width: $bd-action-icon-size;
         }
     }
   }
